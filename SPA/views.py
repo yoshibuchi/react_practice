@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Spa
 
-# Create your views here.
+
+class SpaListView(ListView):
+    model = Spa
+    template_name = 'Spa_list.html'
