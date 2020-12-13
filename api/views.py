@@ -1,6 +1,6 @@
 from rest_framework import generics
 
-from books.models import Spa
+from SPA.models import Spa
 from .serializers import SpaSerializer
 
 
