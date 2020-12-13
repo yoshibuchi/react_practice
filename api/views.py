@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from books.models import Spa
+from .serializers import SpaSerializer
+
+
+class SpaAPIView(generics.ListAPIView):
+    queryset = Spa.objects.all()
+    serializer_class = SpaSerializer
